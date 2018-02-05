@@ -1,0 +1,72 @@
+html{
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    font-family: sans-serif;    
+}
+
+a {
+    color: black;
+    font-weight: 100;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.5s; 
+    display: inline-block;
+    letter-spacing: 2px;
+    width: 100%;
+}
+a:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 0;
+    /* background: purple; */
+}
+
+/* Flexbox styles */
+
+.flexnav ul{
+    border: 1px solid black;
+    list-style: none;
+    margin:0;
+    /* background: red; */
+    padding: 0;
+    display: flex;
+    width: 100%;
+    display: flex;
+}
+
+.flexnav li{
+    flex: 2;
+}
+
+.flexnav .social{
+    flex: 1;
+}
+
+@media all and (max-width:1000px){
+    .flexnav ul{
+        flex-wrap: wrap;
+    }
+
+    .flexnav li{
+        flex: 1 1 50%;
+    }
+}
+
+@media all and (max-width:500px){
+    .flexnav ul{
+        flex-direction: column;
+    }
+}
